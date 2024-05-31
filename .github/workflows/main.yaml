@@ -40,3 +40,4 @@ jobs:
             sudo docker stop my-node-app || true
             sudo docker rm my-node-app || true
             sudo docker run -d -p 80:4000 --name my-node-app ${{ secrets.DOCKER_USERNAME }}/my-node-app:latest
+# end
