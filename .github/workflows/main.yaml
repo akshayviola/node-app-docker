@@ -35,8 +35,9 @@ jobs:
       - name: Set up SSH
         uses: appleboy/ssh-action@v0.1.5
         with:
-          host: ${{secrets.EC2_HOST}}
+          host: ${{ secrets.EC2_HOST }}
           username: ubuntu
+          key: ${{ secrets.EC2_KEY }}
 
       - name: SSH into EC2 and deploy
         run: |
