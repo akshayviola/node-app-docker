@@ -22,7 +22,7 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: akshay2001a/my-node-app:latest
-        tags: latest
+        tags:  ${{ secrets.DOCKER_USERNAME }}/flask-app:latest
 
   deploy:
     runs-on: ubuntu-latest
