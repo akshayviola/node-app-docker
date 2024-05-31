@@ -39,4 +39,4 @@ jobs:
 
       - name: SSH into EC2 and deploy
         run: |
-          ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.EC2_HOST }} 'docker pull akshay2001a/my-node-app:latest && docker stop my-node-app || true && docker rm my-node-app || true && docker run -d -p 80:80 --name my-node-app akshay2001a/my-node-app:latest'
+          ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.EC2_HOST }} 'docker pull akshay2001a/my-node-app:latest && docker stop my-node-app || true && docker rm my-node-app || true && docker run -d -p 80:3000 --name my-node-app akshay2001a/my-node-app:latest'
